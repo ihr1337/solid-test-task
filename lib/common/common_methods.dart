@@ -6,23 +6,19 @@ import 'package:flutter/material.dart';
 class CommonMethods {
   /// This method returns a random color
   static Color returnRandomColor() {
-    int returnRandomInt() {
-      final int = Random().nextInt(255);
-
-      return int;
-    }
+    const maxColorValue = 255;
 
     final colorToReturn = Color.fromARGB(
-      returnRandomInt(),
-      returnRandomInt(),
-      returnRandomInt(),
-      returnRandomInt(),
+      Random().nextInt(maxColorValue),
+      Random().nextInt(maxColorValue),
+      Random().nextInt(maxColorValue),
+      Random().nextInt(maxColorValue),
     );
 
     return colorToReturn;
   }
 
-  /// This method returns the contrast color based on the background color
+  /// This method returns the contrast color based on the provided color
   static TextStyle returnContrastColor(Color colorForContrast) {
     /// I used computeLuminance to check
     /// if the background color is light or dark
