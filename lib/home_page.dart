@@ -15,7 +15,6 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   Color backgroundColor = Colors.white;
-  Color textColor = Colors.black;
 
   void changeBackgroundColor() {
     setState(() {
